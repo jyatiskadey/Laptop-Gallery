@@ -1,4 +1,6 @@
 import { Facebook, Instagram, Laptop, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
+import Image from 'next/image';
+import logo from "../image/logo.png"
 
 const Footer = () => {
   return (
@@ -7,7 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <Laptop className="h-8 w-8 text-emerald-400" />
+              {/* <Laptop className="h-8 w-8 text-emerald-400" /> */}
+              <Image src={logo} alt="" height={100} width={100} />
+
               <span className="ml-2 text-xl font-bold">Laptop Gallery</span>
             </div>
             <p className="mt-4 text-gray-300">
