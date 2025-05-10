@@ -10,6 +10,8 @@ import Reviews from "./components/Reviews"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
+import Gallery from "./components/Gallery"
+import GalleryPage from "./components/GalleryPage"
 
 function App() {
   const [activePage, setActivePage] = useState("home")
@@ -22,6 +24,7 @@ function App() {
         <>
           <Hero />
           <FeaturedLaptops />
+          <Gallery />
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <Services />
           </motion.div>
@@ -32,6 +35,7 @@ function App() {
       {activePage === "about" && <About />}
       {activePage === "services" && <Services fullPage={true} />}
       {activePage === "contact" && <Contact />}
+      {activePage === "gallery" && <GalleryPage />}
 
       <Footer />
     </div>

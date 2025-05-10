@@ -9,28 +9,26 @@ const laptops = [
     name: "Dell XPS 13",
     description: 'Intel Core i7, 16GB RAM, 512GB SSD, 13.3" FHD Display',
     price: "$799",
-    image: "/placeholder.svg?height=300&width=400",
-  },
+    image: "https://microless.com/cdn/products/9ab6a5ad2e3f47c9cb1e569a404983ce-hi.jpg"},
   {
     id: 2,
     name: "MacBook Pro 2019",
     description: 'Intel Core i5, 8GB RAM, 256GB SSD, 13" Retina Display',
     price: "$899",
-    image: "/placeholder.svg?height=300&width=400",
-  },
+    image: "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111945_sp799-mbp13touch-space.jpg" },
   {
     id: 3,
     name: "HP Spectre x360",
     description: 'Intel Core i7, 16GB RAM, 1TB SSD, 15.6" 4K Touch Display',
     price: "$849",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSj7K3mf7L6ve8CV5fKHcyEj3d2z7rXhsYW8HnNg67iRaJ6Zbm3jpIHLT_O0ZvkogyPXXT1NPJLz-r39zt79bWqRA1i48HcXuD1bE1MLsnlPjvPpPyqpn44",
   },
   {
     id: 4,
     name: "Lenovo ThinkPad X1",
     description: 'Intel Core i5, 16GB RAM, 512GB SSD, 14" FHD Display',
     price: "$749",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "https://p3-ofp.static.pub//fes/cms/2025/03/28/owwp0je9qq36queobpv7jlk86xqwd2321070.png",
   },
 ]
 
@@ -76,11 +74,11 @@ const FeaturedLaptops = () => {
                 <h3 className="text-lg font-medium text-gray-900">{laptop.name}</h3>
                 <p className="mt-1 text-sm text-gray-500">{laptop.description}</p>
                 <div className="mt-3 flex justify-between items-center">
-                  <p className="text-lg font-bold text-emerald-600">{laptop.price}</p>
-                  <button className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                  {/* <p className="text-lg font-bold text-emerald-600">{laptop.price}</p> */}
+                  {/* <button className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                     <ShoppingCart className="h-4 w-4 mr-1" />
                     Details
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>
@@ -88,7 +86,7 @@ const FeaturedLaptops = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <motion.a
+          {/* <motion.a
             href="#"
             className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +95,7 @@ const FeaturedLaptops = () => {
             viewport={{ once: true }}
           >
             View All Laptops
-          </motion.a>
+          </motion.a> */}
         </div>
       </div>
     </section>
