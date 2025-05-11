@@ -7,37 +7,37 @@ import { ZoomIn, X } from 'lucide-react'
 const galleryImages = [
   {
     id: 1,
-    src: "https://5.imimg.com/data5/SELLER/Default/2022/3/BJ/UM/GD/4697972/laptop-repairing-service-500x500.jpg",
+    src: "../IMG-20250511-WA0080.jpg",
     alt: "Laptop repair service",
     category: "service",
   },
   {
     id: 2,
-    src: "https://images.indianexpress.com/2023/10/hp-refurbished-laptops.jpg?w=414",
+    src: "../IMG-20250511-WA0081.jpg",
     alt: "Premium refurbished laptop",
     category: "laptop",
   },
   {
     id: 3,
-    src: "https://5.imimg.com/data5/SELLER/Default/2022/8/QH/GQ/RP/3894261/computer-cleaning-services-250x250.webp",
+    src: "../IMG-20250511-WA0082.jpg",
     alt: "Computer cleaning service",
     category: "service",
   },
   {
     id: 4,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl4KXwmenbiPXgZN_nojJ44FT8jLSii9Er7A&s",
+    src: "../IMG-20250511-WA0083.jpg",
     alt: "Custom built PC",
     category: "custom",
   },
   {
     id: 5,
-    src: "https://store.infotroop.co.in/product-images/DR.jpg/134577000001826001/800x800",
+    src: "../IMG-20250511-WA0085.jpg",
     alt: "Data recovery service",
     category: "service",
   },
   {
     id: 6,
-    src: "https://5.imimg.com/data5/SELLER/Default/2024/3/395087114/YJ/UQ/HI/193303474/hardware-installation-services-500x500.webp",
+    src:"../IMG-20250511-WA0086.jpg",
     alt: "Hardware installation",
     category: "service",
   },
@@ -47,41 +47,53 @@ const galleryImages = [
 const additionalImages = [
   {
     id: 7,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ-gKJeJqXUomQH99VlByEfg3j_EINrKwUnw&s",
+    src: "../IMG-20250511-WA0004.jpg",
     alt: "Laptop upgrade service",
     category: "service",
   },
   {
     id: 8,
-    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXl2dXFn5orqf7yGCJx4zB8MVeJx90X-VWEg&s",
+    src: "../IMG-20250511-WA0005.jpg",
     alt: "MacBook Pro refurbished",
     category: "laptop",
   },
   {
     id: 9,
-    src: "https://www.srijishnucommunications.com/wp-content/uploads/2023/06/maxresdefault-5-1024x576.jpg",
+    src: "../IMG-20250511-WA0078.jpg",
     alt: "Computer virus removal",
     category: "service",
   },
   {
     id: 10,
-    src: "https://5.imimg.com/data5/RO/RA/JE/SELLER-3866941/gaming-desktop-pc.jpg",
+    src: "../IMG-20250511-WA0076.jpg",
     alt: "Custom gaming PC",
     category: "custom",
   },
   {
     id: 11,
-    src: "https://3.imimg.com/data3/MT/UI/MY-21273847/1.png",
+    src: "../IMG-20250511-WA0075.jpg",
     alt: "Laptop screen replacement",
     category: "service",
   },
   {
     id: 12,
-    src: "https://90a1c75758623581b3f8-5c119c3de181c9857fcb2784776b17ef.ssl.cf2.rackcdn.com/0609475_963546.jpg",
+    src: "../IMG-20250511-WA0074.jpg",
     alt: "SSD installation service",
     category: "service",
   },
-]
+  // ====== Added 30 images with same src pattern ======
+  ...Array.from({ length: 60 }, (_, index) => {
+    const id = 13 + index;
+    const serial = String(6 + index).padStart(4, "0"); // starts from 0006
+    return {
+      id,
+      src: `../IMG-20250511-WA${serial}.jpg`,
+      alt: `Our Gallery ${serial}`,
+      category: "service",
+    };
+  }),
+];
+
 
 const GalleryImage = ({ image, onClick }) => {
   return (
@@ -191,7 +203,7 @@ const Gallery = ({ limit = 6, fullPage = false }) => {
               </button>
               <img src={selectedImage.src || "/placeholder.svg"} alt={selectedImage.alt} className="w-full rounded-lg" />
               <div className="bg-white p-4 rounded-b-lg">
-                <h3 className="text-lg font-medium text-gray-900">{selectedImage.alt}</h3>
+                {/* <h3 className="text-lg font-medium text-gray-900">{selectedImage.alt}</h3> */}
                 <p className="text-gray-500 mt-1">Category: {selectedImage.category}</p>
               </div>
             </div>

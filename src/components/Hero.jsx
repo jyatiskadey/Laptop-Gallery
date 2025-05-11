@@ -6,7 +6,7 @@ import Link from "next/link"
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-r from-gray-900 via-emerald-800 to-emerald-600 overflow-hidden text-white">
+    <section className="relative bg-gradient-to-r from-[#1F3D8F] via-[#28A745] to-[#F57C00] overflow-hidden text-white">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between py-20 px-6 lg:px-12">
         
         {/* Text Content */}
@@ -18,11 +18,11 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             Reliable Laptop Repair & <br />
-            <span className="text-teal-300">Refurbished Devices</span>
+            <span className="text-[#28A745]">Refurbished Devices</span>
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-200 mb-8"
+            className="text-lg md:text-xl text-white/80 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -38,13 +38,13 @@ const Hero = () => {
           >
             <Link
               href="#laptops"
-              className="px-6 py-3 bg-white text-emerald-800 font-semibold rounded-md hover:bg-gray-100 transition"
+              className="px-6 py-3 bg-white text-[#1F3D8F] font-semibold rounded-md hover:bg-gray-100 transition"
             >
               Browse Laptops
             </Link>
             <Link
               href="#services"
-              className="px-6 py-3 bg-emerald-700 text-white font-semibold rounded-md hover:bg-emerald-600 transition"
+              className="px-6 py-3 bg-[#28A745] text-white font-semibold rounded-md hover:bg-[#23913F] transition"
             >
               Explore Services
             </Link>
@@ -61,7 +61,7 @@ const Hero = () => {
           >
             <video
               className="w-full h-full object-cover"
-              src="https://cdn.pixabay.com/video/2023/01/09/145864-787701151_tiny.mp4" // Place this video inside the public/videos folder
+              src="VID-20250511-WA0003.mp4"
               autoPlay
               muted
               loop

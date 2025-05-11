@@ -9,13 +9,15 @@ const laptops = [
     name: "Dell XPS 13",
     description: 'Intel Core i7, 16GB RAM, 512GB SSD, 13.3" FHD Display',
     price: "$799",
-    image: "https://microless.com/cdn/products/9ab6a5ad2e3f47c9cb1e569a404983ce-hi.jpg"},
+    image: "https://microless.com/cdn/products/9ab6a5ad2e3f47c9cb1e569a404983ce-hi.jpg",
+  },
   {
     id: 2,
     name: "MacBook Pro 2019",
     description: 'Intel Core i5, 8GB RAM, 256GB SSD, 13" Retina Display',
     price: "$899",
-    image: "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111945_sp799-mbp13touch-space.jpg" },
+    image: "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111945_sp799-mbp13touch-space.jpg",
+  },
   {
     id: 3,
     name: "HP Spectre x360",
@@ -38,7 +40,7 @@ const FeaturedLaptops = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <motion.h2
-            className="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+            className="text-3xl font-extrabold text-[#046c4e] sm:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -47,7 +49,7 @@ const FeaturedLaptops = () => {
             Featured Laptops
           </motion.h2>
           <motion.p
-            className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4"
+            className="mt-3 max-w-2xl mx-auto text-xl text-gray-600 sm:mt-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -68,14 +70,18 @@ const FeaturedLaptops = () => {
               viewport={{ once: true }}
             >
               <div className="aspect-w-3 aspect-h-2 bg-gray-200">
-                <img src={laptop.image || "/placeholder.svg"} alt={laptop.name} className="w-full h-48 object-cover" />
+                <img
+                  src={laptop.image || "/placeholder.svg"}
+                  alt={laptop.name}
+                  className="w-full h-48 object-cover"
+                />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-medium text-gray-900">{laptop.name}</h3>
-                <p className="mt-1 text-sm text-gray-500">{laptop.description}</p>
+                <h3 className="text-lg font-medium text-[#046c4e]">{laptop.name}</h3>
+                <p className="mt-1 text-sm text-gray-600">{laptop.description}</p>
                 <div className="mt-3 flex justify-between items-center">
-                  {/* <p className="text-lg font-bold text-emerald-600">{laptop.price}</p> */}
-                  {/* <button className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                  {/* <p className="text-lg font-bold text-[#11a683]">{laptop.price}</p> */}
+                  {/* <button className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-[#046c4e] hover:bg-[#11a683] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#046c4e]">
                     <ShoppingCart className="h-4 w-4 mr-1" />
                     Details
                   </button> */}
@@ -85,18 +91,18 @@ const FeaturedLaptops = () => {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          {/* <motion.a
+        {/* <div className="mt-10 text-center">
+          <motion.a
             href="#"
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#046c4e] hover:bg-[#11a683] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#046c4e]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             View All Laptops
-          </motion.a> */}
-        </div>
+          </motion.a>
+        </div> */}
       </div>
     </section>
   )

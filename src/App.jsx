@@ -12,6 +12,7 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import Gallery from "./components/Gallery"
 import GalleryPage from "./components/GalleryPage"
+import TestimonialsSlider from "./components/TestimonialsSlider"
 
 function App() {
   const [activePage, setActivePage] = useState("home")
@@ -28,6 +29,7 @@ function App() {
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             <Services />
           </motion.div>
+          <TestimonialsSlider/>
           <Reviews />
         </>
       )}
