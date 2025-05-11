@@ -42,7 +42,7 @@ const Navbar = ({ activePage, setActivePage }) => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <Image src={logo} alt="Logo" height={40} width={40} className="rounded-full" />
-            <span className="text-lg font-semibold text-emerald-700 tracking-tight">Arbitrage Live</span>
+            <span className="text-lg font-semibold text-emerald-700 tracking-tight">Laptop Gallery</span>
           </div>
 
           {/* Desktop Nav */}
