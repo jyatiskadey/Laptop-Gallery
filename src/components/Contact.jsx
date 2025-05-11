@@ -98,8 +98,8 @@ const Contact = () => {
                 </div>
                 <div className="ml-3 text-gray-600">
                   <h4 className="text-lg font-medium text-gray-900">Email</h4>
-                  <p>info@laptopgallery.com</p>
-                  <p>support@laptopgallery.com</p>
+                  <p>laptopgallery.kadru@gmail.com</p>
+                  
                 </div>
               </div>
             </div>
